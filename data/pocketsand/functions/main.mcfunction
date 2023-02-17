@@ -1,0 +1,3 @@
+execute as @a if score @s bundle_use matches 1.. if score @s pocketsand_uses matches 1.. at @s run function pocketsand:effects/pocket_sand/resolve_hands
+execute as @a[predicate=pocketsand:nbt_checks/pocketsand_is_offhand] unless entity @s[predicate=pocketsand:nbt_checks/pocketsand_is_mainhand] store result score @s pocketsand_uses run data get entity @s Inventory[{Slot:-106b}].tag.Items[{id:"minecraft:sand"}].Count
+execute as @a[predicate=pocketsand:nbt_checks/pocketsand_is_mainhand] store result score @s pocketsand_uses run data get entity @s SelectedItem.tag.Items[{id:"minecraft:sand"}].Count
